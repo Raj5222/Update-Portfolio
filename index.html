@@ -4,71 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Data</title>
+    <title>Password Check</title>
     <script defer src="script.js"></script>
 </head>
 
 <body>
-    <h1>Insert Data</h1>
+    <h1>Password Protected Area</h1>
 
-    <!-- Bio Form -->
-    <h2>Insert Bio</h2>
-    <form id="bio-form">
-        <input type="text" id="bio-name" placeholder="Name" required>
-        <input type="text" id="bio-roles" placeholder="Roles (comma separated)" required>
-        <input type="text" id="bio-description" placeholder="Description" required>
-        <input type="text" id="bio-github" placeholder="GitHub URL" required>
-        <input type="text" id="bio-resume" placeholder="Resume URL" required>
-        <input type="text" id="bio-linkedin" placeholder="LinkedIn URL" required>
-        <button type="submit">Submit Bio</button>
-    </form>
+    <!-- Password Form -->
+    <div id="password-container">
+        <h2>Enter Password</h2>
+        <form id="password-form">
+            <input type="password" id="password" placeholder="Enter password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-    <!-- Education Form -->
-    <h2>Insert Education</h2>
-    <form id="education-form">
-        <input type="text" id="education-school" placeholder="School" required>
-        <input type="text" id="education-degree" placeholder="Degree" required>
-        <input type="text" id="education-img" placeholder="Image (base64)" required>
-        <input type="text" id="education-grade" placeholder="Grade" required>
-        <input type="text" id="education-date" placeholder="Date" required>
-        <input type="text" id="education-desc" placeholder="Description" required>
-        <button type="submit">Submit Education</button>
-    </form>
-
-    <!-- Project Form -->
-    <h2>Insert Project</h2>
-    <form id="project-form">
-        <input type="text" id="project-title" placeholder="Title" required>
-        <input type="text" id="project-date" placeholder="Date" required>
-        <input type="text" id="project-description" placeholder="Description" required>
-        <input type="text" id="project-image" placeholder="Image (base64)" required>
-        <input type="text" id="project-tags" placeholder="Tags (comma separated)" required>
-        <input type="text" id="project-github" placeholder="GitHub URL">
-        <input type="text" id="project-webapp" placeholder="Live URL">
-        <select id="project-category" required>
-            <option value="web app">Web-Site</option>
-            <option value="android app">Android Application</option>
-            <option value="machine learning">Machine Learning</option>
-        </select>
-        <button type="submit">Submit Project</button>
-    </form>
-
-    <!-- Experience Form -->
-    <h2>Insert Experience</h2>
-    <form id="experience-form">
-        <input type="text" id="experience-img" placeholder="Image (base64)" required>
-        <input type="text" id="experience-role" placeholder="Role" required>
-        <input type="text" id="experience-company" placeholder="Company" required>
-        <input type="text" id="experience-date" placeholder="Date" required>
-        <input type="text" id="experience-desc" placeholder="Description" required>
-        <input type="text" id="experience-skills" placeholder="Skills (comma separated)" required>
-        <button type="submit">Submit Experience</button>
-    </form>
-
-    <!-- Skills Form -->
-    <h2>Skills Display</h2>
-    <div id="skills-display"></div>
-    
+    <!-- Protected Content -->
+    <div id="protected-content" style="display: none;">
+        <h1>Insert Data</h1>
+        
+        <!-- Bio Form -->
+        <h2>Insert Bio</h2>
+        <form id="bio-form">
+            <input type="text" id="bio-name" placeholder="Name" required>
+            <input type="text" id="bio-roles" placeholder="Roles (comma separated)" required>
+            <input type="text" id="bio-description" placeholder="Description" required>
+            <input type="text" id="bio-github" placeholder="GitHub URL" required>
+            <input type="text" id="bio-resume" placeholder="Resume URL" required>
+            <input type="text" id="bio-linkedin" placeholder="LinkedIn URL" required>
+            <button type="submit">Submit Bio</button>
+        </form>
+        
+        <!-- Education Form -->
+        <h2>Insert Education</h2>
+        <form id="education-form">
+            <input type="text" id="education-school" placeholder="School" required>
+            <input type="text" id="education-degree" placeholder="Degree" required>
+            <input type="text" id="education-img" placeholder="Image (base64)" required>
+            <input type="text" id="education-grade" placeholder="Grade" required>
+            <input type="text" id="education-date" placeholder="Date" required>
+            <input type="text" id="education-desc" placeholder="Description" required>
+            <button type="submit">Submit Education</button>
+        </form>
+        
+        <!-- Project Form -->
+        <h2>Insert Project</h2>
+        <form id="project-form">
+            <input type="text" id="project-title" placeholder="Title" required>
+            <input type="text" id="project-date" placeholder="Date" required>
+            <input type="text" id="project-description" placeholder="Description" required>
+            <input type="text" id="project-image" placeholder="Image (base64)" required>
+            <input type="text" id="project-tags" placeholder="Tags (comma separated)" required>
+            <input type="text" id="project-github" placeholder="GitHub URL">
+            <input type="text" id="project-webapp" placeholder="Live URL">
+            <select id="project-category" required>
+                <option value="web app">Web-Site</option>
+                <option value="android app">Android Application</option>
+                <option value="machine learning">Machine Learning</option>
+            </select>
+            <button type="submit">Submit Project</button>
+        </form>
+        
+        <!-- Experience Form -->
+        <h2>Insert Experience</h2>
+        <form id="experience-form">
+            <input type="text" id="experience-img" placeholder="Image (base64)" required>
+            <input type="text" id="experience-role" placeholder="Role" required>
+            <input type="text" id="experience-company" placeholder="Company" required>
+            <input type="text" id="experience-date" placeholder="Date" required>
+            <input type="text" id="experience-desc" placeholder="Description" required>
+            <input type="text" id="experience-skills" placeholder="Skills (comma separated)" required>
+            <button type="submit">Submit Experience</button>
+        </form>
+        
+        <!-- Skills Form -->
+        <h2>Skills Display</h2>
+        <div id="skills-display"></div>
+        
         <h2>Insert Skills</h2>
         <form id="skills-form">
             <select id="skills-title" required>
@@ -87,6 +100,7 @@
             <button type="submit">Submit Skills</button>
         </form>
         <br><br><br>
+    </div>
 </body>
 
 </html>
