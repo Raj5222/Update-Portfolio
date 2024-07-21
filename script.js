@@ -166,7 +166,6 @@ document.getElementById('add-skill').addEventListener('click', () => {
     `;
     container.appendChild(skillEntry);
 });
-
 async function fetchAndDisplaySkills() {
     try {
         const response = await fetch(url+'/api/skills');
@@ -218,3 +217,28 @@ fetchAndDisplaySkills();
 
 
 })
+document.addEventListener('DOMContentLoaded', () => {
+    const correctPassword = 'Raj@0206'; // Set your password here
+
+    const passwordForm = document.getElementById('password-form');
+    const passwordInput = document.getElementById('password');
+    const protectedContent = document.getElementById('protected-content');
+    const passwordContainer = document.getElementById('password-container');
+
+    passwordForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const enteredPassword = passwordInput.value;
+
+        if (enteredPassword === correctPassword) {
+            // Show protected content and hide password form
+            protectedContent.style.display = 'block';
+            passwordContainer.style.display = 'none';
+        } else {
+            alert('Incorrect password');
+        }
+
+        // Clear the input field
+        passwordInput.value = '';
+    });
+});
