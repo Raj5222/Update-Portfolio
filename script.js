@@ -212,14 +212,13 @@ function updateSkillsDisplay(data) {
     });
 }
 
-// Fetch and display skills on page load
 fetchAndDisplaySkills();
 
 
 })
 document.addEventListener('DOMContentLoaded', () => {
-    const correctPassword = 'Raj@0206'; // Set your password here
-
+    // const correctPasswordHash = CryptoJS.SHA256('pass').toString();
+    const Hash ="96b154af9682d09f937cb8a059648ddd0eb0ecce9e3c404963b7d6f1f370505a";
     const passwordForm = document.getElementById('password-form');
     const passwordInput = document.getElementById('password');
     const protectedContent = document.getElementById('protected-content');
@@ -228,17 +227,15 @@ document.addEventListener('DOMContentLoaded', () => {
     passwordForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const enteredPassword = passwordInput.value;
+        const enteredPasswordHash = CryptoJS.SHA256(passwordInput.value).toString();
 
-        if (enteredPassword === correctPassword) {
-            // Show protected content and hide password form
+        if (enteredPasswordHash === Hash) {
             protectedContent.style.display = 'block';
             passwordContainer.style.display = 'none';
         } else {
             alert('Incorrect password');
         }
 
-        // Clear the input field
         passwordInput.value = '';
     });
 });
