@@ -1,4 +1,4 @@
-const url = "https://form-api-429806.el.r.appspot.com"
+const url = "https://form-api-430607.df.r.appspot.com"
 document.addEventListener('DOMContentLoaded', () => {
     // Handle Bio Form Submission
     document.getElementById('bio-form').addEventListener('submit', async (e) => {
